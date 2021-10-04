@@ -20,8 +20,8 @@ export class ListarOComponent implements OnInit {
     })
   }
   EditarO(order:Order):void{
-    localStorage.setItem("num_orden",order.num_order.toString());
-    this.router.navigate(["edit-o"]);
+    localStorage.setItem("num_orden",order.num_orden.toString());
+    this.router.navigate(["editO"]);
   }
 
   DeleteO(order:Order){

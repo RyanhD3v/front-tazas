@@ -28,8 +28,8 @@ export class EditOComponent implements OnInit {
     this.service.updateOrder(order)
     .subscribe(data=>{
       this.order=data;
-      alert("Se actualizo el producto");
-      this.router.navigate(["listar"]);
+      alert("Orden actualizada");
+      this.router.navigate(["listarO"]);
     })
   }
 

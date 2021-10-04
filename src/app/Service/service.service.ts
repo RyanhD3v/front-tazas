@@ -18,17 +18,13 @@ export class ServiceService {
   UrlU='http://localhost:8080/api/updateTaza';
   UrlD='http://localhost:8080/api/deleteTaza';
 
-  UrlGo='http://localhost:8080/api/orders';
-  UrlPo='http://localhost:8080/api/createOrder';
-  UrlUo='http://localhost:8080/api/updateOrder';
-  UrlDo='http://localhost:8080/api/deleteOrder';
-
+  
   getProducts(){
     return this.http.get<Taza[]>(this.Url);
   }
   createTaza(taza:Taza){
     return this.http.post<Taza>(this.UrlP,taza);
-
+    
   }
   getTazaId(id:number){
     return this.http.get<Taza>(this.Url+"/"+id);
@@ -39,7 +35,12 @@ export class ServiceService {
   deleteTaza(taza:Taza){
     return this.http.delete<Taza>(this.UrlD+"/"+taza.id);
   }
+  
 
+  UrlGo='http://localhost:8080/api/orders';
+  UrlPo='http://localhost:8080/api/createOrder';
+  UrlUo='http://localhost:8080/api/updateOrder';
+  UrlDo='http://localhost:8080/api/deleteOrder';
 
   getOrders(){
     return this.http.get<Order[]>(this.UrlGo);
@@ -48,15 +49,15 @@ export class ServiceService {
   createOrder(order:Order){
     return this.http.post<Order>(this.UrlPo,order);
   }
-  getOrderId(num_order:number){
-    return this.http.get<Order>(this.UrlGo+"/"+num_order);
+  getOrderId(num_orden:number){
+    return this.http.get<Order>(this.UrlGo+"/"+num_orden);
   }
 
   updateOrder(order:Order){
-    return this.http.put<Order>(this.UrlUo+"/"+order.num_order, order);
+    return this.http.put<Order>(this.UrlUo+"/"+order.num_orden, order);
   }
   deleteOrder(order:Order){
-    return this.http.delete<Order>(this.UrlDo+"/"+order.num_order);
+    return this.http.delete<Order>(this.UrlDo+"/"+order.num_orden);
   }
 
 

@@ -1,5 +1,5 @@
 export class Order{
-    num_order!: number;
+    num_orden!: number;
     cantidad!: number;
     fecha_emision!: Date;
     status!: String;

@@ -6,7 +6,7 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>#_Orden</th>
                     <th>Cantidad</th>
                     <th>Fecha de emisión</th>
                     <th>Estatus</th>
@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let order of orders" class="text-center">
-                    <td>{{order.num_order}}</td>
+                    <td>{{order.num_orden}}</td>
                     <td>{{order.cantidad}}</td>
                     <td>{{order.fecha_emision}}</td>
                     <td>{{order.status}}</td>
