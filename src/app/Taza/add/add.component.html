@@ -1,0 +1,59 @@
+<div class="container col-md-4">
+    <div class="card-header">
+        <h3>Nueva Taza</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+            <div class="form-group">
+                <label for="">Selecciona el color:</label>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="taza.color" name="color" required>
+                    <option value="AZUL">Azul</option>
+                    <option value="VERDE">Verde</option>
+                    <option value="AMARILLA">Amarilla</option>
+                    <option value="ROSA">Rosa</option>
+                    <option value="CAFE">Cafe</option>
+                    <option value="BLANCA">Blanca</option>
+                    <option value="NEGRA">Negra</option>
+                  </select>
+                
+            </div>
+            <div class="form-group">
+                <label for="">Capacidad</label>
+                <input type="number" class="form-control" [(ngModel)]="taza.capacidad" name="capacidad" placeholder="Numero de .ml" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="">Dimenciones</label>
+                <input type="text" class="form-control" [(ngModel)]="taza.dimencion" name="dimencion" placeholder="Tamaño o medidas">
+            </div>
+
+            <div class="form-group">
+                <label for="material">Selecciona el material:</label>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="taza.material" name="material" required>
+                    <option value="CERAMICA">Ceramica</option>
+                    <option value="PLASTICO">Plastico</option>
+                    <option value="METAL">Metal</option>
+                    <option value="CRISTAL">Cristal</option>
+                  </select>
+                
+            </div>
+            <div class="form-group">
+                <label for="calidad">Calidad de la taza:</label>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="taza.calidad" name="calidad" required>
+                    <option value="ALTA">Alta</option>
+                    <option value="BAJA">Baja</option>
+                  </select>
+                
+            </div>
+            <div class="form-group">
+                <label for="">Modelo</label>
+                <input type="text" class="form-control" [(ngModel)]="taza.modelo" name="modelo" placeholder="modelo" required>
+            </div>
+            <br>
+                <button (click)="Guardar()" class="btn btn-info">Guardar</button>
+
+            
+            
+        </form>
+    </div>
+</div>

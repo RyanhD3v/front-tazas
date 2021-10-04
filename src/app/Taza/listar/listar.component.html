@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card-header">
+        <h3>Stock Tazas</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Capacidad</th>
+                    <th>Color</th>
+                    <th>Dimenciones</th>
+                    <th>Material</th>
+                    <th>Calidad</th>
+                    <th>Modelo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let taza of tazas" class="text-center">
+                    <td>{{taza.id}}</td>
+                    <td>{{taza.capacidad}}</td>
+                    <td>{{taza.color}}</td>
+                    <td>{{taza.dimencion}}</td>
+                    <td>{{taza.material}}</td>
+                    <td>{{taza.calidad}}</td>
+                    <td>{{taza.modelo}}</td>
+                    <td>
+                        <div class="col"><button (click)="Editar(taza)" class="btn btn-warning">Editar</button></div>
+                        <br/>
+                        <div class="col"><button (click)="Delete(taza)" class="btn btn-danger">Delete</button></div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
